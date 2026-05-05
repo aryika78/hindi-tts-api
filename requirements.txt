@@ -1,0 +1,18 @@
+# Core TTS
+piper-tts==1.4.2
+onnxruntime==1.24.4
+
+# API
+fastapi==0.136.0
+uvicorn[standard]==0.44.0
+python-multipart==0.0.26
+pydantic==2.13.1
+
+# Hindi normalization helpers
+dateparser==1.4.0
+
+# HTTP client (for tests)
+httpx==0.28.1
+
+# Note: Kenpath indic-text-normalization is installed separately in Dockerfile
+# (requires pynini + libopenfst-dev, not on PyPI)

@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+test_output/
+tests/
+notebooks/
+scripts/
+docs/
+.git/
+.gitignore
+# root-level test scripts (not needed in image)
+test_*.py

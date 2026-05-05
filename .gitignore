@@ -1,0 +1,17 @@
+# Model files (large binaries, download separately)
+models/*.onnx
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
