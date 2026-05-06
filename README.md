@@ -148,7 +148,7 @@ Raw Hindi text often has digits, dates, and English words that the TTS model can
 ├── DESIGN.md                            # Model selection rationale
 ├── .gitignore
 ├── models/
-│   ├── pratham-medium.onnx           # Piper voice (not in repo, download separately)
+│   ├── pratham-medium.onnx           # Piper VITS voice model
 │   └── pratham-medium.onnx.json
 ├── src/
 │   ├── config.py                     # Model paths and settings
@@ -170,11 +170,7 @@ Raw Hindi text often has digits, dates, and English words that the TTS model can
 
 ## Model Files
 
-The `.onnx` model file is gitignored (63MB). The config `.onnx.json` is included in the repo. Place this file in `models/` before running:
-
-- `pratham-medium.onnx`
-
-Download from [Piper voices](https://huggingface.co/rhasspy/piper-voices/tree/main/hi/hi_IN/pratham/medium).
+The `pratham-medium.onnx` model (63MB) is included in the repo for zero-setup Docker builds. Originally from [Piper voices](https://huggingface.co/rhasspy/piper-voices/tree/main/hi/hi_IN/pratham/medium).
 
 ---
 
