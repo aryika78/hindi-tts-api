@@ -136,7 +136,7 @@ Raw Hindi text often has digits, dates, and English words that the TTS model can
 4. **Numbers, currency, time** — handled by Kenpath WFST normalizer: `250` → `दो सौ पचास`, `₹500` → `पाँच सौ रुपए`, `12:30` → `बारह बजकर तीस मिनट`
 
 **Known limitations:**
-- `₹NUMBER करोड़/ला��` — Kenpath mishandles the rupee sign placement. Workaround: write `1800 करोड़ रुपये` without ₹.
+- `₹NUMBER करोड़/लाख` — Kenpath mishandles the rupee sign placement. Workaround: write `1800 करोड़ रुपये` without ₹.
 
 ---
 
@@ -156,7 +156,7 @@ Raw Hindi text often has digits, dates, and English words that the TTS model can
 │   │   ├── main.py                   # FastAPI app, /health, demo UI
 │   │   ├── schemas.py                # Request/response models
 │   │   └── routes/
-│   │       ���── synthesize.py         # /synthesize and /synthesize/stream
+│   │       └── synthesize.py         # /synthesize and /synthesize/stream
 │   └── tts/
 │       ├── engine.py                 # Piper model loader and synthesis
 │       ├── normalizer.py             # Hindi text normalizer + IPA→Devanagari
@@ -170,10 +170,9 @@ Raw Hindi text often has digits, dates, and English words that the TTS model can
 
 ## Model Files
 
-The `models/` directory is gitignored (large binaries). Place these files in `models/` before running:
+The `.onnx` model file is gitignored (63MB). The config `.onnx.json` is included in the repo. Place this file in `models/` before running:
 
 - `pratham-medium.onnx`
-- `pratham-medium.onnx.json`
 
 Download from [Piper voices](https://huggingface.co/rhasspy/piper-voices/tree/main/hi/hi_IN/pratham/medium).
 
